@@ -1,8 +1,10 @@
 import pyautogui
+import pyperclip
 
-pyautogui.moveTo(x=224,y=212,duration=2)
-pyautogui.click(button='right')
-pyautogui.moveTo(x=345,y=376,duration=2)
-pyautogui.click(button='left')
-pyautogui.moveTo(x=612,y=410,duration=2)
-pyautogui.click(button='left')
+def mensagem(frase):
+    pyperclip.copy(frase)
+    pyautogui.hotkey('ctrl','v')
+
+    pyautogui.moveTo(x=1276,y=888,duration=2)
+    pyautogui.click()
+    mensagem('Olá mundo')
